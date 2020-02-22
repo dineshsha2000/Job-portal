@@ -29,11 +29,12 @@ echo  $addr;
 echo    $about;
 $g="select * from request where giverid='$giverid',empid='$id';";
 $t=mysqli_query($con,$g);
-if($t){
+if($g){
     $q="insert into request(giverid,empid,name,email,ph,addr,about) values('$giverid','$id','$name','$email','$ph','$addr','$about');";
 $r=mysqli_query($con,$q);
     
 if($r){
+   
     echo "inserted";
 }
 else{
@@ -43,6 +44,11 @@ else{
 
 }
 else{
+        ?>
+    
+    
+    <?php
+
     echo "already applied";
 }
 

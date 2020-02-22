@@ -15,7 +15,7 @@ $r="insert into jobgivers (empname,email,password) values('$name','$email','$pas
 $f=mysqli_query($con,$r);
 if($f){
     echo "inserted sucessfully";
-   header("location:login.php");
+   header("location:login.html");
 }
 else{
     echo "error ";

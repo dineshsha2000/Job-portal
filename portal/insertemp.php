@@ -7,7 +7,7 @@ $addr=$_POST['addr'];
 $about=$_POST['about'];
 $pass=$_POST['pass'];
 $cpass=$_POST['cpass'];
-//$cert=$_POST['cert'];
+$cert=$_POST['cert'];
 echo $name;
 echo $dob;
 echo $email;

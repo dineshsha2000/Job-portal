@@ -5,7 +5,7 @@
     <title>Document</title>
               
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link rel="stylesheet" href="bootstrap.min.css">-->
+<link rel="stylesheet" href="bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">    
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -66,6 +66,9 @@
             a{
                 float: right;
             }
+               .al{
+                float: right;
+            }
     </style>
 
 </head>
@@ -79,8 +82,8 @@
     
     </script>
 
- <form method="post" action="logout.php">
-  <button type="submit" onclick="myfun()"class="btn btn-lg btn-info">LOG OUT</button>
+ <form method="post" action="logout.php " class="al">
+  <button type="submit" onclick="myfun()" class="btn btn-lg btn-info">LOG OUT</button>
    <br>
    </form>
 
@@ -92,11 +95,11 @@ $con=mysqli_connect("localhost","root","","portal");
 
 $v=$_SESSION["id"];
 $con=mysqli_connect("localhost","root","","portal");
-$r="select * from request where giverid='$v'";
+$r="select * from request where giverid='$v' AND status!='2';";
 $res=mysqli_query($con,$r);
 if(mysqli_num_rows($res)==0){
     ?>
-    <h4>No result</h4>
+    <h4 class="display-2">No result</h4>
     <?php
 }
 else{    
@@ -124,10 +127,7 @@ else{
         <th>
           About
         </th>
-            <th>
-        Result
-        </th>
-    
+            
         <th>
           ACCEPT?Reject
         </th>
@@ -162,11 +162,6 @@ else{
          <td>
           <h4>
             <?php echo $f[7]?>
-        </h4>
-        </td>
-         <td>
-          <h4>
-            <?php echo $f[9]?>
         </h4>
         </td>
          <td>

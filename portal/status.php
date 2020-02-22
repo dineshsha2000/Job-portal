@@ -17,8 +17,11 @@ echo "successfully rejected";
     }
 
 //echo "value is '$m'";
-$q="update request SET status='$v',result='$m' where autoid='$id';";
+$q="update request set status='$v' where autoid='$id';";
 
+$q="UPDATE request
+SET status = '$v'
+WHERE autoid = '$id';";
 $res=mysqli_query($con,$q);
 
 

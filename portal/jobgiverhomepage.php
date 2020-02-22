@@ -95,14 +95,14 @@
             padding: 30px;
         }
         .cen{
-            text-align: center;
-        margin-right: 40px;
+            
+        margin-right:150 px;
         }
         .sp{
             text-align: center;
             align-content: center;
             align-items: center;
-            margin-left:250px;
+            margin-left:150px;
         }
             
             body{
@@ -114,6 +114,9 @@
                 text-align: center;
             }
             a{
+                float: right;
+            }
+            .al{
                 float: right;
             }
     </style>
@@ -129,7 +132,7 @@
     
     </script>
 
- <form method="post" action="logout.php">
+ <form class="al" method="post" action="logout.php">
   <button type="submit" onclick="myfun()"class="btn btn-lg btn-info">LOG OUT</button>
    <br>
    </form>
@@ -139,11 +142,12 @@
         <h2>JOB-GIVER</h2>
         <form name="RegForm" action="createevent.html" onsubmit="return VALIDATE()" method="POST">
         
-            <input type="submit" name="Submit"  value="Create event">
+            <input type="submit" class="btn-lg btn-outline-dark" name="Submit"  value="Create event">
         </form>
         </div> 
+        <br><br><br>
         <form method="post" action="notification.php">
-      <button type="submit">
+      <button  class="btn-lg btn-outline-dark" type="submit">
           
         view notification
       </button>
@@ -176,8 +180,9 @@ if(mysqli_num_rows($res)==0){
 else{    
     ?>
     <div class="">
-  <div class="container cen">
-   <h3 >Current Activities</h3>
+  <div class=" cen">
+  <br>
+      <h3 ><u>Current Activities :</u></h3>
     <div class="sp">
     <table  class="table-striped ">
         <th>

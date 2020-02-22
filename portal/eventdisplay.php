@@ -27,7 +27,7 @@ $salary=$_POST['salary'];
   border-style: hidden;
 }
             body{
-   
+ 
             
             }
         th{
@@ -38,22 +38,23 @@ $salary=$_POST['salary'];
         table{
             text-align: center;
             color:black;
+              margin-right: 20px;
         }
         tr{
             
             background-color: bisque;
         }
         td{
-            margin-left: 35px;
+            margin-left: 40px;
             padding: 50px;
         }
         th{
-            margin-left: 70px;
+            margin-left: 50px;
             padding: 30px;
         }
         .cen{
             text-align: center;
-        margin-right: 40px;
+        margin-right: 20px;
         }
         .sp{
             text-align: center;
@@ -95,7 +96,18 @@ $salary=$_POST['salary'];
 </div>
     <button type="submit" name="but" class="btn btn-lg btn-outline-dark" >Search</button>      
 </div>      
-</form>                 
+<br>
+<br>
+<br>
+
+</form>  
+    
+   <form method="post" action="viewresult.php">
+      
+       <button type="submit">viewresult</button>
+       
+   </form>
+                                
                   <?php
        $con=mysqli_connect("localhost","root","","portal");
     
@@ -103,7 +115,6 @@ $salary=$_POST['salary'];
         
 echo $_SESSION["email"]; 
 echo $_SESSION["id"];    
-    
     
     
     
