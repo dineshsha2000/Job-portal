@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login form</title>
+<link rel="stylesheet"  href="login.css">
+<script> 
+function VALIDATE()                              
+
+{
+	
+   var Email=document.RegForm.Email.value;
+   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!Email.match(mailformat)) {
+        alert("You have entered an invalid email address!");
+        return false;
+    } else {
+        return true;
+    }
+
+}
+                 
+ </script>   
+</head>
+
+<body>
+<div class="box">
+<h2>Log-in</h2>
+<form name="RegForm" action="login.php" onsubmit="return VALIDATE()" method="POST">
+
+<div class="inputBox">
+    <input type="radio" name="role" value="1">
+    <label>Employer</label>
+</div>
+<div class="inputBox">
+    <input type="radio" name="role" value="0">
+    <label>Employee</label>
+</div>
+    <div class="inputBox">
+<input type="text" name="email"  required ="">
+<label>Email</label>
+</div>
+<div class="inputBox">
+<input type="password" name="pass" minlength= "5" maxlength="10" required ="" >
+<label>Password</label>
+</div>
+
+
+    <input type="submit" name="Submit" value="Submit">
+</form>
+</div> 
+
+</body>
+</html>

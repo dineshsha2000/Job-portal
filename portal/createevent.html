@@ -1,0 +1,65 @@
+
+<html>
+<head><title>Login form</title>
+<link rel="stylesheet"  href="login.css">
+<script> 
+function VALIDATE()                              
+
+{
+	
+   var Email=document.RegForm.Email.value;
+   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!Email.match(mailformat)) {
+        alert("You have entered an invalid email address!");
+        return false;
+    } else {
+        return true;
+    }
+
+}
+                 
+ </script>   
+</head>
+
+<body>
+<div class="box">
+<h2>JOB DETAILS</h2>
+<form name="RegForm" action="insertevent.php" onsubmit="return VALIDATE()" method="POST">
+    <div class="inputBox">
+        <input type="text" name="role"  required ="">
+        <label><b>Role</b></label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="eventname"  required ="">
+            <label>event name </label>
+            </div>
+        <div class="inputBox">
+            <input type="text" name="dur"  required ="">
+            <label>Duration</label>
+            </div>
+       
+        
+        <div class="inputBox">
+            <input type="text" name="salary"  required ="">
+            <label>Stipend </label>
+            </div>
+
+       <div class="inputBox">
+             <label>DESCRIPTION ABOUT event</label>  
+             <br>
+             <br>
+            <textarea  type="text" name="des" rows="5" cols="40"></textarea>
+           
+            <br>
+       
+            <br>
+            <br>
+       
+        </div>
+       
+        <input type="submit" name="Submit" value="Submit">
+</form>
+</div> 
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html>
+<head><title>SIGN-UP form</title>
+    <link rel="stylesheet"  href="empdetails.css">
+<script>
+function VALIDATE()
+{var pd=document.RegForm.t4.value;
+var cpd=document.RegForm.t5.value;
+if(pd!=cpd)
+{
+    alert("Password doesn't match...");
+    return false;
+   }
+   var Email=document.RegForm.Email.value;
+   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(Email.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+return false;
+}
+}
+                 
+ </script>  
+</head>
+
+<body>
+
+<div class="box">
+    <h2>SIGN-UP</h2>
+    <button onclick="window.location.href = 'employersignup.php';" type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#exampleModal">
+        Signup for employer 
+      </button>
+    <form name="RegForm" action="insertemp.php" method="POST" onsubmit="return VALIDATE()" >
+
+       
+       
+        <div class="inputBox">
+            <input type="text" name="name" required>
+            <label>Username</label>
+        </div>
+       
+        <div class="inputBox">
+            <input type="text" name="dob" id="ipl" required>
+            <label>DATE OF BIRTH</label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="email" id="ipl" required>
+            <label>Email</label>
+        </div>
+        <div class="inputBox">
+            <input type="password" name="pass" minlength="5" maxlength="12" required>
+            <label>Password</label>
+        </div>
+        <div class="inputBox">
+            <input type="password" name="cpass" minlength="5" maxlength="12" required>
+            <label>Confirm Password</label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="addr" required>
+            <label>Address</label>
+        <div class="inputBox">
+            <input type="text" name="ph"  required>
+            <label>Mobile Number</label>
+        <div class="inputBox">Past Experience</div>    
+        <br>
+        <div class="inputBox">
+            <input type="text" name="event" >
+            <label>event</label>
+        <div class="inputBox">
+            <input type="text" name="duration" >
+            <label>duration</label>
+               <br>
+                     <br>  
+
+       
+             
+         
+                                             
+                       <br>
+                       
+<div class="inputBox">
+    <input type="radio" name="cert" value="below 10">
+    <label>below 10</label>
+</div>
+
+<div class="inputBox">
+    <input type="radio" name="cert" value="10">
+    <label>10</label>
+</div>
+
+   <div class="inputBox">
+    <input type="radio" name="cert" value="12">
+    <label>12</label>
+</div>
+
+      <div class="inputBox">
+    <input type="radio" name="cert" value="degree">
+    <label>degree</label>
+</div>
+                                                                                    
+                                                                                        
+
+                                                                                        
+
+                                            
+                       
+       
+           
+<br>
+       <br>
+       
+        <div class="inputBox">
+             <label>DESCRIPTION ABOUT YOU</label>  
+             <br>
+             <br>
+            <textarea  type="text" name="about" rows="5" cols="40"></textarea>
+           
+            <br>
+       
+            <br>
+            <br>
+       
+        </div>
+            <input type="submit"  value="Submit" >
+    </form>
+</div>
+
+</body>
+</html>
